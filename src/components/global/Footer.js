@@ -4,6 +4,6 @@
     export default function Footer(){
         return(
 
-            <section class='bg-dark'> im footer </section>
+            <section class='bg-dark text-white text-center py-2'> im footer </section>
         );
     }

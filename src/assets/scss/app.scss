@@ -1,2 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
+.rowLink{
+    display:block;
+    tr{
+        display: table;
+        width: 100%;
+    }
+}
+
