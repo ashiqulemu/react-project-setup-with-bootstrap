@@ -9,7 +9,7 @@ export default function Team() {
 
 
     let teamInfos = [
-        { name: 'royals', age: 12  },
+        { name: 'royals', age: 12 },
         { name: 'royals', age: 12 },
         { name: 'royals', age: 12 },
         { name: 'royals', age: 12 },
@@ -20,12 +20,12 @@ export default function Team() {
 
     let teamInfo = teamInfos.map((teamInfo,index)=>      
         
-        <Link to='/team-details' className='rowLink'>
-         <tr>
-            <td>  {index + 1} </td>
-            <td>  {teamInfo.name} </td>
-            <td> {teamInfo.age} </td> 
-          </tr>  
+        <Link to= {"/team-details"} className='rowLink'>
+            <div class='table-row'>
+                <div class='table-col'>  {index + 1} </div>
+                <div class='table-col'>  {teamInfo.name}  </div>
+                <div class='table-col'> {teamInfo.age} </div>
+            </div>
         </Link>
     )
  
@@ -38,14 +38,14 @@ export default function Team() {
 
            <div className='row'>
                <div class='col-md-8 offset-md-2 mx-auto'>
-                    <table class='table'>
-                        <tr>
-                            <td>Sl</td>
-                            <td>Name</td>
-                            <td>age</td>
-                        </tr>
+                    <div class='table-custom'>
+                       <div class='table-row'>
+                            <div class='table-col'> </div>
+                            <div class='table-col'> </div>
+                            <div class='table-col'> </div>
+                       </div>
                               {teamInfo}
-                    </table>                  
+                    </div>                  
                </div>
            </div>
         </div>

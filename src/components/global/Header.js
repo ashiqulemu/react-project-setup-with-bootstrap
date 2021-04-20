@@ -18,7 +18,8 @@
                             <div class="navbar-nav">
                                 <Link to='/' class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></Link>
                                 <Link to='/about' class="nav-item nav-link" href="#">About</Link>
-                                <Link to='/team' class="nav-item nav-link" href="#">Team</Link>  
+                                <Link to='/team' class="nav-item nav-link" href="#">Team</Link>
+                                <Link to='/events' class="nav-item nav-link" href="#">Events</Link>
                             </div>
                         </div>
                     </nav>

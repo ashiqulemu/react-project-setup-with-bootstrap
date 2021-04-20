@@ -8,3 +8,15 @@
     }
 }
 
+.table-custom{
+    width: 100%;
+    .table-row{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
+}
+
