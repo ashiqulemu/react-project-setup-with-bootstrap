@@ -15,13 +15,14 @@
     } from "react-router-dom";
     
     import 'bootstrap/dist/js/bootstrap.js'
-    import '../src/assets/scss/app.scss' 
+    import '../src/assets/scss/app.scss'
+    import '../node_modules/@popperjs/core/dist/cjs/popper'
+    import '../node_modules/jquery/dist/jquery'
 
     function App() {
       return (   
           <Router>
           <div>
-
             <Header/> 
 
             <Switch>
@@ -44,8 +45,7 @@
 
             <Footer/>
           </div>
-        </Router> 
-      
+        </Router>
 
       );
     }
