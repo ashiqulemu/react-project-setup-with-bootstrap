@@ -1,43 +1,53 @@
-{
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
-    "bootstrap": "^4.6.0",
-    "node-sass": "^5.0.0",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.5.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "sass-loader": "^10.1.1",
-    "web-vitals": "^1.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
-}
+
+    import React from 'react'
+    import Home from './components/Pages/Home'
+    import About from './components/Pages/About' 
+    import Team from './components/Pages/Team' 
+    import Header from './components/global/Header'
+    import Footer from './components/global/Footer'
+    import Events from './components/Pages/Events'
+    import TeamDetails from './components/Pages/Team-Details'
+    import {
+      BrowserRouter as Router,
+      Switch,
+      Route,
+      Link
+    } from "react-router-dom";
+    
+    import 'bootstrap/dist/js/bootstrap.js'
+    import '../src/assets/scss/app.scss'
+    import '../node_modules/@popperjs/core/dist/cjs/popper'
+    import '../node_modules/jquery/dist/jquery'
+
+    function App() {
+      return (   
+          <Router>
+          <div>
+            <Header/> 
+
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route> 
+              <Route path="/about">
+                <About />
+              </Route> 
+              <Route path="/team">
+                <Team />
+              </Route> 
+              <Route path="/team-details">
+                <TeamDetails />
+              </Route>
+              <Route path="/events">
+                <Events />
+              </Route>
+            </Switch>
+
+            <Footer/>
+          </div>
+        </Router>
+
+      );
+    }
+
+    export default App;
